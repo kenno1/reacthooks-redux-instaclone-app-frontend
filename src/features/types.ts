@@ -13,4 +13,6 @@ export interface PROPS_AUTHEN {
     img: File | null;
   }
 
-  
+  export interface PROPS_NICKNAME {
+    nickName: string;
+  }
