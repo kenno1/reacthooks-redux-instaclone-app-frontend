@@ -58,3 +58,15 @@ export const authSlice = createSlice({
       },
     },
   });
+
+  export const {
+    fetchCredStart,
+    fetchCredEnd,
+    setOpenSignIn,
+    resetOpenSignIn,
+    setOpenSignUp,
+    resetOpenSignUp,
+    setOpenProfile,
+    resetOpenProfile,
+    editNickname,
+  } = authSlice.actions;
