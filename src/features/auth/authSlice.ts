@@ -42,6 +42,26 @@ export const fetchAsyncCreateProf = createAsyncThunk(
   }
 );
 
+export const fetchAsyncUpdateProf = createAsyncThunk(
+  "profile/put",
+  async (profile: PROPS_PROFILE) => {
+    const uploadData = new FormData();
+    uploadData.append("nickName", profile.nickName);
+    profile.img && uploadData.append("img", profile.img, profile.img.name);
+    const res = await axios.put(
+      `${apiUrl}api/profile/${profile.id}/`,
+      uploadData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `JWT ${localStorage.localJWT}`,
+        },
+      }
+    );
+    return res.data;
+  }
+);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
