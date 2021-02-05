@@ -71,6 +71,15 @@ export const fetchAsyncGetMyProf = createAsyncThunk("profile/get", async () => {
   return res.data[0];
 });
 
+export const fetchAsyncGetProfs = createAsyncThunk("profiles/get", async () => {
+  const res = await axios.get(`${apiUrl}api/profile/`, {
+    headers: {
+      Authorization: `JWT ${localStorage.localJWT}`,
+    },
+  });
+  return res.data;
+});
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
