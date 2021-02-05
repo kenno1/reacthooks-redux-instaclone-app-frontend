@@ -137,6 +137,9 @@ export const authSlice = createSlice({
     builder.addCase(fetchAsyncLogin.fulfilled, (state, action) => {
       localStorage.setItem("localJWT", action.payload.access);
     });
+    builder.addCase(fetchAsyncCreateProf.fulfilled, (state, action) => {
+      state.myprofile = action.payload;
+    });
   },
 });
 
