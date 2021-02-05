@@ -29,6 +29,19 @@ export const fetchAsyncRegister = createAsyncThunk(
   }
 );
 
+export const fetchAsyncCreateProf = createAsyncThunk(
+  "profile/post",
+  async (nickName: PROPS_NICKNAME) => {
+    const res = await axios.post(`${apiUrl}api/profile/`, nickName, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `JWT ${localStorage.localJWT}`,
+      },
+    });
+    return res.data;
+  }
+);
+
 export const authSlice = createSlice({
   name: "auth",
   initialState: {
