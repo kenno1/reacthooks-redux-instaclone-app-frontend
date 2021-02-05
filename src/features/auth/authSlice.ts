@@ -140,6 +140,9 @@ export const authSlice = createSlice({
     builder.addCase(fetchAsyncCreateProf.fulfilled, (state, action) => {
       state.myprofile = action.payload;
     });
+    builder.addCase(fetchAsyncGetMyProf.fulfilled, (state, action) => {
+      state.myprofile = action.payload;
+    });
   },
 });
 
