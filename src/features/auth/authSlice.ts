@@ -133,6 +133,11 @@ export const authSlice = createSlice({
       state.myprofile.nickName = action.payload;
     },
   },
+  extraReducers: (builder) => {
+    builder.addCase(fetchAsyncLogin.fulfilled, (state, action) => {
+      localStorage.setItem("localJWT", action.payload.access);
+    });
+  },
 });
 
 export const {
