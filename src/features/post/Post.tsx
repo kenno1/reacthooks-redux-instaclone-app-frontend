@@ -22,6 +22,14 @@ import {
 
 import { PROPS_POST } from "../types";
 
+const useStyles = makeStyles((theme) => ({
+    small: {
+        width: theme.spacing(3),
+        height: theme.spacing(3),
+        marginRight: theme.spacing(1),
+    },
+}));
+
 export const Post = () => {
     return (
         <div>
