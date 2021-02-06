@@ -143,6 +143,9 @@ export const authSlice = createSlice({
     builder.addCase(fetchAsyncGetMyProf.fulfilled, (state, action) => {
       state.myprofile = action.payload;
     });
+    builder.addCase(fetchAsyncGetProfs.fulfilled, (state, action) => {
+      state.profiles = action.payload;
+    });
     builder.addCase(fetchAsyncUpdateProf.fulfilled, (state, action) => {
       state.myprofile = action.payload;
       state.profiles = state.profiles.map((prof) =>

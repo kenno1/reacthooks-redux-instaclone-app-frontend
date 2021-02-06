@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import styles from "./Auth.module.css";
 import Modal from "react-modal";
 import { Formik } from "formik";
-import { object, string } from "yup";
+import * as Yup from "yup";
 import { TextField, Button, CircularProgress } from "@material-ui/core";
 
 import {
@@ -75,11 +75,11 @@ const Auth: React.FC = () => {
             await dispatch(fetchCredEnd());
             await dispatch(resetOpenSignUp());
           }}
-          validationSchema={object().shape({
-            email: string()
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
               .email("email format is wrong")
               .required("email is must"),
-            password: string().required("password is must").min(4),
+            password: Yup.string().required("password is must").min(4),
           })}
         >
           {({
@@ -176,11 +176,11 @@ const Auth: React.FC = () => {
             await dispatch(fetchCredEnd());
             await dispatch(resetOpenSignIn());
           }}
-          validationSchema={object().shape({
-            email: string()
+          validationSchema={Yup.object().shape({
+            email: Yup.string()
               .email("email format is wrong")
               .required("email is must"),
-            password: string().required("password is must").min(4),
+            password: Yup.string().required("password is must").min(4),
           })}
         >
           {({
