@@ -37,7 +37,9 @@ import {
     resetOpenNewPost,
     fetchAsyncGetPosts,
     fetchAsyncGetComments,
-  } from "../post/postSlice";
+} from "../post/postSlice";
+
+import Post from "../post/Post";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
