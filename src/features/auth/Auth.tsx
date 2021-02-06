@@ -7,6 +7,23 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { TextField, Button, CircularProgress } from "@material-ui/core";
 
+import {
+    selectIsLoadingAuth,
+    selectOpenSignIn,
+    selectOpenSignUp,
+    setOpenSignIn,
+    resetOpenSignIn,
+    setOpenSignUp,
+    resetOpenSignUp,
+    fetchCredStart,
+    fetchCredEnd,
+    fetchAsyncLogin,
+    fetchAsyncRegister,
+    fetchAsyncGetMyProf,
+    fetchAsyncGetProfs,
+    fetchAsyncCreateProf,
+  } from "./authSlice";
+
 const Auth = () => {
     return (
         <div>
