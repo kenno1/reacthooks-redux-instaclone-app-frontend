@@ -24,7 +24,23 @@ import {
     fetchAsyncCreateProf,
   } from "./authSlice";
 
-const Auth = () => {
+  const customStyles = {
+    overlay: {
+      backgroundColor: "#777777",
+    },
+    content: {
+      top: "55%",
+      left: "50%",
+  
+      width: 280,
+      height: 350,
+      padding: "50px",
+  
+      transform: "translate(-50%, -50%)",
+    },
+  };
+  
+  const Auth: React.FC = () => {
     return (
         <div>
             
