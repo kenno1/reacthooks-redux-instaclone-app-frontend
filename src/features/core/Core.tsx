@@ -41,6 +41,7 @@ import {
 
 import Post from "../post/Post";
 import EditProfile from "./EditProfile";
+import NewPost from "./NewPost";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {
