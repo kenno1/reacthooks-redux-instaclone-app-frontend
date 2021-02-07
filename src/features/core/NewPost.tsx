@@ -18,6 +18,19 @@ import {
 import { Button, TextField, IconButton } from "@material-ui/core";
 import { MdAddAPhoto } from "react-icons/md";
 
+const customStyles = {
+    content: {
+      top: "55%",
+      left: "50%",
+  
+      width: 280,
+      height: 220,
+      padding: "50px",
+  
+      transform: "translate(-50%, -50%)",
+    },
+  };
+  
 export default function  () {
     return (
         <div>
